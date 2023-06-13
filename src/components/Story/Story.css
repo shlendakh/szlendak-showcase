@@ -28,29 +28,23 @@ body {
   align-items: center;
   background-color: #2E2E2E;
   color: white;
-  height: calc(var(--vh, 1vh) * 100);
   margin: 0;
   font-family: "Arial", sans-serif;
 }
 
 #root {
-  height: calc(var(--vh, 1vh) * 100);
-  width: 100vw;
-  max-width: 100vw;
   overflow-x: hidden;
 }
 
 .story {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: calc(var(--vh, 1vh) * 100);
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   color: white;
+  border-radius: 25px;
 }
 
 .story-0 {

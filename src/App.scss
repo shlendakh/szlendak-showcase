@@ -5,8 +5,11 @@
 @import './sass/base';
 
 .app {
-    width: 100%;
-    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 @media only screen and (min-width: 600px) {

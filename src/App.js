@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
 import Story from './components/Story/Story';
-import ProgressBar from './components/ProgressBar/ProgressBar';
+
 
 function App() {
   const [activeStory, setActiveStory] = useState(0);
@@ -21,7 +21,6 @@ function App() {
 
   return (
     <div className="app">
-      <ProgressBar totalStories={totalStories} activeStory={activeStory} />
       <Story activeStory={activeStory} nextStory={nextStory} previousStory={previousStory} />
     </div>
   );

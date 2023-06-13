@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import ProgressBar from '../ProgressBar/ProgressBar';
 import './Story.scss';
 
-function Story({ activeStory, nextStory, previousStory }) {
+function Story({ activeStory, nextStory, previousStory, totalStories }) {
   const [startPos, setStartPos] = useState(null);
 
   const handleStart = (e) => {
@@ -46,6 +47,7 @@ function Story({ activeStory, nextStory, previousStory }) {
       onTouchStart={handleStart}
       onTouchMove={handleMove}
     >
+      <ProgressBar totalStories={totalStories} activeStory={activeStory} />
       <p>Story {activeStory}</p>
     </div>
   );

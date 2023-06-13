@@ -4,22 +4,22 @@ import './Story.scss';
 function Story({ activeStory, nextStory, previousStory}) {
   const [startPos, setStartPos] = useState(null);
 
-  const handleStart = (e) => {
-    setStartPos(e.clientX || e.touches[0].clientX);
+  const handleTouchStart = (e) => {
+    setStartPos(e.touches[0].clientX);
   };
 
-  const handleMove = (e) => {
-    if (startPos === null) return;  // Only proceed if a swipe/drag started
-    const currentPos = e.clientX || e.touches[0].clientX;
+  const handleTouchMove = (e) => {
+    if (startPos === null) return;
+    const currentPos = e.touches[0].clientX;
     const diff = startPos - currentPos;
 
-    if (Math.abs(diff) > 0) {
+    if (Math.abs(diff) > 50) {  // You can adjust this value to change the sensitivity
       if (diff > 0) {
-        previousStory()
-      } else {
         nextStory();
+      } else {
+        previousStory();
       }
-       setStartPos(null);  // Reset start position after swipe/drag
+      setStartPos(null);
     }
   };
 
@@ -38,10 +38,8 @@ function Story({ activeStory, nextStory, previousStory}) {
     <div 
       className={`story story-${activeStory}`} 
       onClick={handleClick}
-      onMouseDown={handleStart}
-
-      onTouchStart={handleStart}
-      onTouchMove={handleMove}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
     >
       <p>Story {activeStory}</p>
     </div>

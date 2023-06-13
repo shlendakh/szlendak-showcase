@@ -15,12 +15,9 @@ function Story({ activeStory, nextStory, previousStory}) {
 
     if (Math.abs(diff) > 0) {
       if (diff > 0) {
-        /* left swipe/drag */
         previousStory()
       } else {
-        /* right swipe/drag */
         nextStory();
-        
       }
        setStartPos(null);  // Reset start position after swipe/drag
     }

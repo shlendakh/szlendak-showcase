@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -42,51 +43,175 @@ body {
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
   font-size: 2em;
   color: white;
+  font-family: "Rubik", sans-serif;
 }
 
 .story-0 {
-  background-color: #CCC;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #c8bd1d;
+}
+.story-0 h1 {
+  flex: 2;
+  width: 100%;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+.story-0 h2 {
+  flex: 2;
+  width: 100%;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: white;
+}
+.story-0 h3 {
+  flex: 1;
+  width: 100%;
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: white;
+}
+.story-0 p {
+  flex: 1;
+  width: 100%;
+  font-size: 0.3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  justify-content: center;
+  color: #AAA;
+}
+.story-0 .content {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.story-0 .fa-solid {
+  color: #FFF;
+  margin-left: 5px;
+  animation: 3s ease-in infinite pulse;
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.story-0::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg1.jpg");
+  background-position: center;
+  background-position-x: 20%;
+  background-position-y: 55%;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  transform: scaleX(-1);
+  box-shadow: inset 0 0 0 1000px rgba(8, 8, 48, 0.6666666667);
 }
 
 .story-1 {
-  background-color: #333;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #c8bd1d;
+}
+.story-1 h1 {
+  flex: 2;
+  width: 100%;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+}
+.story-1 h2 {
+  flex: 2;
+  width: 100%;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: white;
+}
+.story-1 h3 {
+  flex: 1;
+  width: 100%;
+  font-size: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  color: white;
+}
+.story-1 p {
+  flex: 1;
+  width: 100%;
+  font-size: 0.3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  text-align: center;
+  justify-content: center;
+  color: #AAA;
+}
+.story-1 .content {
+  flex: 2;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.story-1 .fa-solid {
+  color: #FFF;
+  margin-left: 5px;
 }
 
-.story-2 {
-  background-color: #CCC;
-}
-
-.story-3 {
-  background-color: #333;
-}
-
-.story-4 {
-  background-color: #CCC;
-}
-
-.story-5 {
-  background-color: #333;
-}
-
-.story-6 {
-  background-color: #CCC;
-}
-
-.story-7 {
-  background-color: #333;
-}
-
-.story-8 {
-  background-color: #CCC;
-}
-
-.story-9 {
-  background-color: #333;
+.story-1::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg1.jpg");
+  background-position: center;
+  background-position-x: 20%;
+  background-position-y: 55%;
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  transform: scaleX(-1);
+  box-shadow: inset 0 0 0 1000px rgba(8, 8, 48, 0.6666666667);
 }
 
 @media only screen and (min-width: 600px) {

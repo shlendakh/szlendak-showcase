@@ -25,8 +25,13 @@ img {
 body {
   background-color: #2E2E2E;
   color: white;
-  margin: 0;
   font-family: "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 #root {
@@ -35,14 +40,13 @@ body {
 
 .story {
   width: 100%;
-  height: 70vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 2em;
   color: white;
-  border-radius: 25px;
 }
 
 .story-0 {
@@ -83,4 +87,10 @@ body {
 
 .story-9 {
   background-color: #333;
+}
+
+@media only screen and (min-width: 600px) {
+  .story {
+    border-radius: 25px;
+  }
 }/*# sourceMappingURL=Story.css.map */

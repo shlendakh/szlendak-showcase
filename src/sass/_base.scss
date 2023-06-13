@@ -1,10 +1,15 @@
 @import './variables';
 
 body {
-    background-color: $graphite; // Używamy zmiennej z _variables.scss
+    background-color: $graphite;
     color: white;
-    margin: 0;
     font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
   }
   
   #root {

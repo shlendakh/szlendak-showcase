@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Story from './components/Story/Story';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 
 function App() {
+  const [activeStory, setActiveStory] = React.useState(0);
+
+  const nextStory = () => {
+    setActiveStory((prevActiveStory) => prevActiveStory + 1);
+  };
+
+  const previousStory = () => {
+    setActiveStory((prevActiveStory) => prevActiveStory - 1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <ProgressBar activeStory={activeStory} />
+      <Story activeStory={activeStory} nextStory={nextStory} previousStory={previousStory} />
     </div>
   );
 }

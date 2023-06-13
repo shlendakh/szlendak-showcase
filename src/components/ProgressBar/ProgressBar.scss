@@ -1,0 +1,15 @@
+.progress-bar {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em 0;
+  }
+  
+  .progress-bar-item {
+    width: 10%;
+    height: 2px;
+    background-color: lightgrey;
+  }
+  
+  .progress-bar-item.active {
+    background-color: white;
+  }  

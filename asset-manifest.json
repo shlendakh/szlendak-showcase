@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/szlendak-showcase/static/css/main.dc38f2cd.css",
+    "main.js": "/szlendak-showcase/static/js/main.1fd2779e.js",
+    "index.html": "/szlendak-showcase/index.html",
+    "main.dc38f2cd.css.map": "/szlendak-showcase/static/css/main.dc38f2cd.css.map",
+    "main.1fd2779e.js.map": "/szlendak-showcase/static/js/main.1fd2779e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc38f2cd.css",
+    "static/js/main.1fd2779e.js"
+  ]
+}

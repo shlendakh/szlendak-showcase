@@ -1,0 +1,19 @@
+@import './variables';
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $graphite; // Używamy zmiennej z _variables.scss
+    color: white;
+    height: calc(var(--vh, 1vh) * 100); // Korzystając z rozwiązania dla 100vh na urządzeniach mobilnych
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #root {
+    height: 100%;
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }

@@ -1,9 +1,6 @@
 @import './variables';
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: $graphite; // Używamy zmiennej z _variables.scss
     color: white;
     margin: 0;

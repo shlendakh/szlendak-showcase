@@ -20,4 +20,8 @@ ol, ul {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.root {
+  overflow: hidden;
 }/*# sourceMappingURL=index.css.map */

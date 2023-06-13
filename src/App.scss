@@ -4,6 +4,11 @@
 @import './sass/variables';
 @import './sass/base';
 
+.app {
+    width: 100%;
+    position: relative;
+}
+
 @media only screen and (min-width: 600px) {
     .app {
         width: math.div(100vh, 16) * 9;

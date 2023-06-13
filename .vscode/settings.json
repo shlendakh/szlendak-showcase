@@ -7,7 +7,7 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         "**/*.map": true,
-        "**/*.css": true,
+        "**/*.css": false,
         "**/.vscode": true
     },
     "liveSassCompile.settings.includeItems": [],

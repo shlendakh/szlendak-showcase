@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/szlendak-showcase/static/css/main.bed3853a.css",
-    "main.js": "/szlendak-showcase/static/js/main.0cbb2aef.js",
+    "main.css": "/szlendak-showcase/static/css/main.2f3df6da.css",
+    "main.js": "/szlendak-showcase/static/js/main.9854f7e6.js",
     "index.html": "/szlendak-showcase/index.html",
-    "main.bed3853a.css.map": "/szlendak-showcase/static/css/main.bed3853a.css.map",
-    "main.0cbb2aef.js.map": "/szlendak-showcase/static/js/main.0cbb2aef.js.map"
+    "main.2f3df6da.css.map": "/szlendak-showcase/static/css/main.2f3df6da.css.map",
+    "main.9854f7e6.js.map": "/szlendak-showcase/static/js/main.9854f7e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.bed3853a.css",
-    "static/js/main.0cbb2aef.js"
+    "static/css/main.2f3df6da.css",
+    "static/js/main.9854f7e6.js"
   ]
 }

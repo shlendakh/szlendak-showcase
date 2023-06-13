@@ -1,0 +1,49 @@
+.story {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  color: white;
+}
+
+.story-0 {
+  background-color: #CCC;
+}
+
+.story-1 {
+  background-color: #333;
+}
+
+.story-2 {
+  background-color: #CCC;
+}
+
+.story-3 {
+  background-color: #333;
+}
+
+.story-4 {
+  background-color: #CCC;
+}
+
+.story-5 {
+  background-color: #333;
+}
+
+.story-6 {
+  background-color: #CCC;
+}
+
+.story-7 {
+  background-color: #333;
+}
+
+.story-8 {
+  background-color: #CCC;
+}
+
+.story-9 {
+  background-color: #333;
+}/*# sourceMappingURL=Story.css.map */

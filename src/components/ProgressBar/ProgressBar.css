@@ -1,0 +1,29 @@
+.progress-bar {
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1em;
+  z-index: 1;
+}
+
+.progress-bar-item {
+  width: 10%;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 2px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar-item.active {
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .progress-bar {
+    width: 56vh;
+    margin: 0 auto;
+  }
+}/*# sourceMappingURL=ProgressBar.css.map */

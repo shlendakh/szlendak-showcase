@@ -1,0 +1,15 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/*.map": true,
+        "**/*.css": true,
+        "**/.vscode": true
+    },
+    "liveSassCompile.settings.includeItems": [],
+    "explorerExclude.backup": {}
+}

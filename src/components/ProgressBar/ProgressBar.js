@@ -1,10 +1,13 @@
 import React from 'react';
 import './ProgressBar.scss';
 
-function ProgressBar({ activeStory }) {
+function ProgressBar({ activeStory }, { totalStories }) {
   return (
     <div className="progress-bar">
-      {Array(10).fill().map((_, i) => (
+      {console.log(activeStory + " " + totalStories)}
+      {Array(10)
+      .fill()
+      .map((_, i) => (
         <div key={i} className={`progress-bar-item ${i <= activeStory ? 'active' : ''}`}></div>
       ))}
     </div>

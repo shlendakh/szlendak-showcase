@@ -1,38 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Story.scss';
 
 function Story({ activeStory, nextStory, previousStory }) {
-  let xDown = null;                                                         
+  const [startPos, setStartPos] = useState(null);
 
-  const getTouches = (evt) => { 
-    return evt.touches ||             
-      evt.originalEvent.touches; 
-  };                                                 
+  const handleStart = (e) => {
+    setStartPos(e.clientX || e.touches[0].clientX);
+  };
 
-  const handleTouchStart = (evt) => {
-    const firstTouch = getTouches(evt)[0];                                      
-    xDown = firstTouch.clientX;                                      
-  };                                                
+  const handleMove = (e) => {
+    if (startPos === null) return;  // Only proceed if a swipe/drag started
+    const currentPos = e.clientX || e.touches[0].clientX;
+    const diff = startPos - currentPos;
 
-  const handleTouchMove = (evt) => {
-    if ( ! xDown ) {
-      return;
-    }
-
-    let xUp = evt.touches[0].clientX;                                    
-    let xDiff = xDown - xUp;
-
-    if (Math.abs( xDiff ) > 0) {
-      if ( xDiff > 0 ) {
-        /* left swipe */ 
+    if (Math.abs(diff) > 0) {
+      if (diff < 0) {
+        /* left swipe/drag */
         nextStory();
       } else {
-        /* right swipe */
+        /* right swipe/drag */
         previousStory();
-      }                       
+      }
+       setStartPos(null);  // Reset start position after swipe/drag
     }
-    /* reset values */
-    xDown = null;                                             
   };
 
   const handleClick = (e) => {
@@ -47,8 +37,14 @@ function Story({ activeStory, nextStory, previousStory }) {
   };
 
   return (
-    <div className={`story story-${activeStory}`} onClick={handleClick} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-      {/* Here you would render the content of the story based on activeStory */}
+    <div 
+      className={`story story-${activeStory}`} 
+      onClick={handleClick}
+      onMouseDown={handleStart}
+
+      onTouchStart={handleStart}
+      onTouchMove={handleMove}
+    >
       <p>Story {activeStory}</p>
     </div>
   );

@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './App.scss';
 import Story from './components/Story/Story';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 
 function App() {
-  const [activeStory, setActiveStory] = React.useState(0);
+  const [activeStory, setActiveStory] = useState(0);
+  const totalStories = 10;
 
   const nextStory = () => {
-    setActiveStory((prevActiveStory) => prevActiveStory + 1);
+    if (activeStory < totalStories - 1) {
+      setActiveStory((prevActiveStory) => prevActiveStory + 1);
+    }
   };
 
   const previousStory = () => {
-    setActiveStory((prevActiveStory) => prevActiveStory - 1);
+    if (activeStory > 0) {
+      setActiveStory((prevActiveStory) => prevActiveStory - 1);
+    }
   };
 
   return (
     <div className="app">
-      <ProgressBar activeStory={activeStory} />
+      <ProgressBar totalStories={totalStories} activeStory={activeStory} />
       <Story activeStory={activeStory} nextStory={nextStory} previousStory={previousStory} />
     </div>
   );

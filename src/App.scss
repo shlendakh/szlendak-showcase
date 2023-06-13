@@ -1,0 +1,15 @@
+@import './sass/variables';
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+    .app {
+        width: round(100vh / 16 * 9);
+        height: 100vh;
+        margin: 0 auto;
+    }
+}

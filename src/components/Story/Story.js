@@ -256,7 +256,7 @@ const stories = [
     title: "Contact",
     content: `
       <div class="content header yellow">
-        Potuocamy razem marketing internetowy?
+        Potukamy razem marketing internetowy?
       </div>
 
       <div class="content anim-left">

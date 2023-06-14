@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/szlendak-showcase/static/css/main.dd9d085e.css",
-    "main.js": "/szlendak-showcase/static/js/main.2762a761.js",
+    "main.css": "/szlendak-showcase/static/css/main.3f0cd39a.css",
+    "main.js": "/szlendak-showcase/static/js/main.618ec4c5.js",
+    "static/media/bg10.jpg": "/szlendak-showcase/static/media/bg10.0010a003ec8db4f3f21a.jpg",
+    "static/media/bg11.jpg": "/szlendak-showcase/static/media/bg11.aa8654d5d6a6905abf95.jpg",
     "static/media/bg1.jpg": "/szlendak-showcase/static/media/bg1.e2b3b909cc64b8d22367.jpg",
+    "static/media/bg12.jpg": "/szlendak-showcase/static/media/bg12.110b8864ce5e38edd83f.jpg",
+    "static/media/bg7.png": "/szlendak-showcase/static/media/bg7.e30fa8c0e8a7f5462e48.png",
+    "static/media/bg6.png": "/szlendak-showcase/static/media/bg6.01cc5c926f35e599f303.png",
+    "static/media/bg9.png": "/szlendak-showcase/static/media/bg9.c99664ef976feb61b1c5.png",
+    "static/media/bg5.jpg": "/szlendak-showcase/static/media/bg5.af821eff40765bc7ed10.jpg",
+    "static/media/bg4.jpg": "/szlendak-showcase/static/media/bg4.2e59214418820efcda4f.jpg",
+    "static/media/bg3.jpg": "/szlendak-showcase/static/media/bg3.b1a582645b7a949c4500.jpg",
     "index.html": "/szlendak-showcase/index.html",
-    "main.dd9d085e.css.map": "/szlendak-showcase/static/css/main.dd9d085e.css.map",
-    "main.2762a761.js.map": "/szlendak-showcase/static/js/main.2762a761.js.map"
+    "main.3f0cd39a.css.map": "/szlendak-showcase/static/css/main.3f0cd39a.css.map",
+    "main.618ec4c5.js.map": "/szlendak-showcase/static/js/main.618ec4c5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd9d085e.css",
-    "static/js/main.2762a761.js"
+    "static/css/main.3f0cd39a.css",
+    "static/js/main.618ec4c5.js"
   ]
 }

@@ -645,7 +645,7 @@
     align-items: center;
     justify-content: center;
     flex: 5;
-    font-size: 0.7em;
+    font-size: 0.6em;
     text-align: center;
     position: relative;
 
@@ -703,7 +703,7 @@
     animation: 1s ease slidefadein;
 
     .icon {
-      height: 100px;
+      height: 90px;
     }
   }
 }
@@ -792,132 +792,6 @@
   }
 }
 
-/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
-*
-* Story 8
-*
-*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
-
-.story-8 {
-  position: relative;
-  overflow: hidden;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .header {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-
-    position: relative;
-    animation: 1s ease slidefadein;
-
-    .x {
-      color: $text-color-1;
-      vertical-align: middle;
-      font-size: 15px;
-    }
-
-    .logo {
-      background-color: $text-color-1;
-      padding: 5px;
-      border-radius: 5px;
-      height: 25px;
-    }
-
-    p {
-      color: $text-color-2;
-      font-weight: 600;
-      font-size: 25px;
-    }
-  }
-  .content {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex: 5;
-    font-size: 0.7em;
-    text-align: center;
-    position: relative;
-
-    span {
-      padding: 1px;
-      background-color: $accent-color-1;
-      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
-    }
-
-    &.anim-left {
-      animation: 1s ease slidefadein;
-    }
-
-    &.anim-right {
-      animation: 1s ease slidefadeinright;
-    }
-
-    &.anim-pulse {
-      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
-    }
-
-    &:nth-of-type(3){
-      color: $text-color-2;
-    }
-
-    .fa-solid {
-      color: $text-color-1;
-      font-size: 8em;
-    }
-
-    &.content-ico {
-      position: absolute;
-      bottom: 15%;
-      vertical-align: top;
-      left: -10%;
-      font-size: 2em;
-      transform: rotate(15deg);
-      animation: 2s ease infinite bounce;
-    }
-
-    &.yellow {
-      color: $text-color-2;
-    }
-  }
-
-  .icons {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    position: relative;
-    gap: 40px;
-    animation: 1s ease slidefadein;
-
-    .icon {
-      height: 200px;
-    }
-  }
-}
-
-.story-8::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("../../../public/assets/img/bg9.png");
-  background-repeat: no-repeat;
-  background-size: auto 125%;
-  box-shadow: inset 0 0 0 1000px rgba($color: #000, $alpha: .6);
-}
-
-
 .story-7::before {
   content: '';
   position: absolute;
@@ -978,7 +852,7 @@
     align-items: center;
     justify-content: center;
     flex: 5;
-    font-size: 0.7em;
+    font-size: 0.6em;
     text-align: center;
     position: relative;
 
@@ -1036,7 +910,7 @@
     animation: 1s ease slidefadein;
 
     .icon {
-      height: 200px;
+      height: 150px;
     }
   }
 }
@@ -1073,7 +947,7 @@
     align-items: center;
     justify-content: center;
     flex: 5;
-    font-size: 0.7em;
+    font-size: 0.6em;
     text-align: center;
     position: relative;
 
@@ -1125,10 +999,10 @@
     justify-content: center;
     flex: 1;
     position: relative;
-    gap: 40px;
+    gap: 30px;
 
     i {
-      font-size: 1.5em;
+      font-size: 1.3em;
       width: 20%;
       text-align: center;
       opacity: 0;
@@ -1175,7 +1049,7 @@
     align-items: center;
     justify-content: center;
     flex: 5;
-    font-size: 0.7em;
+    font-size: 0.6em;
     text-align: center;
     position: relative;
 

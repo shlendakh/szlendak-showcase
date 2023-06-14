@@ -241,13 +241,13 @@ const stories = [
     title: "Ja i analiza",
     content: `
       <div class="content yellow anim-left">
-        Chętnie zaopiekuję się małym lokalnym biznesem, bo przecież nie każdy ma dużo pieniędzy na kampanie, a to właśnie dzięki sukcesom w marketingu można te budżety zwiększyć.
+        Chętnie zajmuje się małym lokalnym biznesem, bo przecież nie każdy ma dużo pieniędzy na kampanie, a to właśnie dzięki sukcesom w marketingu można te budżety zwiększyć.
       </div>
       <div class="icons">
       <i class="fa-solid fa-comments-dollar"></i>
       </div>
       <div class="content anim-left">
-        <p>Lubię myśleć <span>out of the box</span>, tworzyć kampanie poza schematem i takich eksperymentów świetnie nadają się konta dużych biznesowych klientów.</p>
+        <p>Ale lubię też myśleć <span>out of the box</span>, tworzyć kampanie poza schematem i takich eksperymentów świetnie nadają się konta dużych biznesowych klientów.</p>
       </div>
     `
   },

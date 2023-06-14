@@ -1,6 +1,6 @@
 # Szlendak Showcase
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://spdx.org/licenses/MIT.html)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://makeapullrequest.com)
 
 Szlendak Showcase is a web application built using React that simulates the Instagram Stories interface. This application was initially created as a marketing portfolio for a recruitment task, but I will continue to develop the project in the future to be more versatile.
 

@@ -15,10 +15,6 @@ Szlendak Showcase is a web application built using React that simulates the Inst
 * The progress bar at the top indicates which story is currently active
 * Support for content rendering using HTML and DOMPurify
 
-## Usage
-
-[Kliknij tutaj](https://shlendakh.github.io/szlendak-showcase/) by zobaczyć działającą wersję 
-
 ## Disclaimer
 
 The content of the tiles was created "on the fly" using an array containing HTML code. Despite using DOMPurify, this is not the best method of content management and I will be updating this in the future.

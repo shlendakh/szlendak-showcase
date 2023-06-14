@@ -1,18 +1,15 @@
-/* *** *** ***
-*
-* Imports
-*
-*** *** *** */
+/*
+ * Imports
+ */
 
 @use "sass:math";
 @import './variables';
 
-/* *** *** ***
-*
-* Animations
-*
-*** *** *** */
+/*
+ * Animations
+ */
 
+ // Fade In -> Fade Out
 @keyframes pulse {
     0% {
         opacity: 0;
@@ -27,6 +24,7 @@
     }
 }
 
+// Fade in with slide from left
 @keyframes slidefadein {
     0% {
         left: -100%;
@@ -39,6 +37,7 @@
     }
 }
 
+// Fade in with slide from right
 @keyframes slidefadeinright {
     0% {
         left: 100%;
@@ -51,6 +50,7 @@
     }
 }
 
+// Simple fade out
 @keyframes fadeout {
     0% {
         opacity: 1;
@@ -61,6 +61,7 @@
     }
 }
 
+// Pulse with scale +20%
 @keyframes bounce {
     0% {
         transform: rotate(15deg) scale(1);

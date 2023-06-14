@@ -1,20 +1,35 @@
+/*
+ * Imports
+ */
+
 import React, { useState } from 'react';
 import DOMPurify from 'dompurify';
 import './Story.scss';
 
+/*
+ * Story React component
+ *
+ * It takes activeStory value as prop to generate Story content
+ * and nextStory & previousStory as callback funtions to handle navigation
+ */
+
 function Story({ activeStory, nextStory, previousStory}) {
+  
+  // State
   const [startPos, setStartPos] = useState(null);
+
 
   const handleTouchStart = (e) => {
     setStartPos(e.touches[0].clientX);
   };
 
+  // Handle swipes (touch only)
   const handleTouchMove = (e) => {
     if (startPos === null) return;
     const currentPos = e.touches[0].clientX;
     const diff = startPos - currentPos;
 
-    if (Math.abs(diff) > 50) {  // You can adjust this value to change the sensitivity
+    if (Math.abs(diff) > 50) {  // Sensitivity value for swipe
       if (diff > 0) {
         nextStory();
       } else {
@@ -24,6 +39,7 @@ function Story({ activeStory, nextStory, previousStory}) {
     }
   };
 
+  // Handle clicks (touch and mouse)
   const handleClick = (e) => {
     const { clientX } = e;
     const { innerWidth } = window;
@@ -35,6 +51,7 @@ function Story({ activeStory, nextStory, previousStory}) {
     }
   };
 
+  // Sanitize html inserts from stories array
   const createMarkup = (html) => {
     const sanitizedHTML = DOMPurify.sanitize(html, {
       ADD_ATTR: ['target', 'rel', 'onClick'],
@@ -64,6 +81,8 @@ function Story({ activeStory, nextStory, previousStory}) {
   );
 }
 
+// Stories array with content to show on slides
+// !!! DISCLAIMER: This is not good method for that, but this project was made "on the fly" and and want to upgrade it in the future
 const stories = [
   {
     id: 1,

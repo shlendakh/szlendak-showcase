@@ -1,5 +1,13 @@
+/*
+ * Imports
+ */
+
 @use "sass:math";
 @import '../../sass/variables';
+
+/*
+ * Styling for ProgressBar Component
+ */
 
 .progress-bar {
     display: flex;

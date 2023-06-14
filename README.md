@@ -2,6 +2,10 @@
 
 Szlendak Showapp to aplikacja webowa stworzona za pomocą React, która symuluje interfejs Stories na Instagramie. Ta aplikacja została stworzona jako portfolio marketingowe.
 
+## Disclaimer
+
+Zawartość kafelek została zrobiona "na szybko" przy użyciu tablicy zawierającej w sobie html. Będzie to poprawione w przyszłości ponieważ jest to niebezpieczne mimo zastosowania DOMPurify.
+
 ## Instalacja
 
 Aby zainstalować i uruchomić tę aplikację, wykonaj następujące kroki:
@@ -13,11 +17,7 @@ Aby zainstalować i uruchomić tę aplikację, wykonaj następujące kroki:
 
 ## Użycie
 
-Użytkownik może poruszać się między różnymi Stories za pomocą gestów przesunięcia (swipe) lub kliknięć. W prawym górnym rogu ekranu znajduje się pasek postępu, który pokazuje aktualną pozycję w ramach wszystkich dostępnych Stories.
-
-## Rozwój
-
-Jeśli chcesz rozwijać ten projekt, sklonuj to repozytorium i zainstaluj wymagane zależności, jak opisano powyżej. Po wprowadzeniu zmian, możesz zrobić commit i push do swojego repozytorium, a następnie otworzyć Pull Request do tego repozytorium.
+Użytkownik może poruszać się między różnymi Stories za pomocą gestów przesunięcia (swipe) lub kliknięć. W u góry ekranu znajduje się pasek postępu, który pokazuje aktualną pozycję w ramach wszystkich dostępnych Stories.
 
 ## Licencja
 

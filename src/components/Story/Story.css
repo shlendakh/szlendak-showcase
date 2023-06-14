@@ -1,63 +1,63 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  background-color: #2E2E2E;
-  color: white;
-  font-family: "Arial", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-#root {
-  overflow-x: hidden;
-}
-
+/* *** *** ***
+*
+* Imports
+*
+*** *** *** */
+/* *** *** ***
+*
+* Colors
+*
+*** *** *** */
+/* *** *** ***
+*
+* Fonts
+*
+*** *** *** */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story default
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .story {
   width: 100%;
   height: calc(var(--vh, 1vh) * 100);
   display: flex;
   font-size: 2em;
-  color: white;
+  color: #ffffff;
   font-family: "Rubik", sans-serif;
+  z-index: 0;
 }
 
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 0
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .story-0 {
   position: relative;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #c8bd1d;
+  color: #ffd601;
+}
+.story-0 .header {
+  margin-bottom: 175px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.story-0 .x {
+  color: #ffffff;
+  font-size: 0.6em;
+}
+.story-0 .x i {
+  width: 100%;
+  text-align: left;
 }
 .story-0 h1 {
-  flex: 2;
   width: 100%;
   font-size: 1.2em;
   display: flex;
@@ -66,24 +66,25 @@ body {
   text-align: center;
 }
 .story-0 h2 {
-  flex: 2;
+  flex: 3;
   width: 100%;
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
 .story-0 h3 {
   flex: 1;
   width: 100%;
   font-size: 0.7em;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
   text-align: center;
-  color: white;
+  color: #ffffff;
 }
 .story-0 p {
   flex: 1;
@@ -94,10 +95,10 @@ body {
   justify-content: flex-start;
   text-align: center;
   justify-content: center;
-  color: #AAA;
+  color: #aaa;
 }
 .story-0 .content {
-  flex: 2;
+  flex: 3;
   height: 100%;
   width: 100%;
   display: flex;
@@ -105,20 +106,11 @@ body {
   justify-content: flex-start;
 }
 .story-0 .fa-solid {
-  color: #FFF;
+  color: #ffffff;
   margin-left: 5px;
-  animation: 3s ease-in infinite pulse;
 }
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.story-0 .fa-arrow-right {
+  animation: 3s ease-in infinite pulse;
 }
 
 .story-0::before {
@@ -134,84 +126,1098 @@ body {
   background-repeat: no-repeat;
   background-size: 80% auto;
   transform: scaleX(-1);
-  box-shadow: inset 0 0 0 1000px rgba(8, 8, 48, 0.6666666667);
+  box-shadow: inset 0 0 0 1000px rgba(42, 9, 68, 0.6);
 }
 
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 1
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 .story-1 {
   position: relative;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #c8bd1d;
 }
-.story-1 h1 {
-  flex: 2;
-  width: 100%;
-  font-size: 1.2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  text-align: center;
-}
-.story-1 h2 {
-  flex: 2;
-  width: 100%;
-  font-size: 0.8em;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-  color: white;
-}
-.story-1 h3 {
-  flex: 1;
-  width: 100%;
+.story-1 .text {
+  position: relative;
+  flex: 4;
+  width: 90%;
   font-size: 0.7em;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  text-align: center;
-  color: white;
-}
-.story-1 p {
-  flex: 1;
-  width: 100%;
-  font-size: 0.3em;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  text-align: center;
+  align-items: center;
   justify-content: center;
-  color: #AAA;
 }
-.story-1 .content {
-  flex: 2;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.story-1 .text-top {
   justify-content: flex-start;
+  animation: 1s ease slidefadein;
 }
-.story-1 .fa-solid {
-  color: #FFF;
-  margin-left: 5px;
+.story-1 .text-bottom {
+  flex: 3;
+  justify-content: flex-end;
+  animation: 1s ease slidefadein;
+}
+.story-1 .text-center {
+  justify-content: center;
+  animation: 1.2s ease slidefadeinright;
+}
+.story-1 .yellow {
+  color: #ffd601;
+}
+.story-1 .text-bg {
+  width: 80%;
+}
+.story-1 .text-bg span {
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035, -0.5em 0 0 #A10035;
 }
 
 .story-1::before {
   content: "";
   position: absolute;
-  width: 200%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  background-image: url("../../../public/assets/img/bg1.jpg");
+  background: linear-gradient(35deg, #2A0944, #26313c);
   background-position: center;
-  background-position-x: 20%;
-  background-position-y: 55%;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 2
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-2 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-2 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-2 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-2 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-2 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-2 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-2 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-2 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-2 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-2 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+
+.story-2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg3.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 80% auto;
-  transform: scaleX(-1);
-  box-shadow: inset 0 0 0 1000px rgba(8, 8, 48, 0.6666666667);
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(38, 49, 60, 0.8);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 3
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-3 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-3 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-3 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-3 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-3 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-3 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-3 .content span {
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035, -0.5em 0 0 #A10035;
+}
+.story-3 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-3 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-3 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-3 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+
+.story-3::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(38, 49, 60, 0.8);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 4
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-4 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-4 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-4 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-4 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-4 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-4 .content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 3;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-4 .content span {
+  padding: 1px;
+  background-color: #2A0944;
+  box-shadow: 0.5em 0 0 #2A0944 -0.5em 0 0 #2A0944;
+}
+.story-4 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-4 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-4 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-4 .content:nth-of-type(3) {
+  color: #ffd601;
+}
+.story-4 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-4 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+
+.story-4::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(38, 49, 60, 0.6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 5
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-5 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-5 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-5 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-5 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-5 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-5 .content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+  gap: 10px;
+}
+.story-5 .content span {
+  padding: 1px;
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035 -0.5em 0 0 #A10035;
+}
+.story-5 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-5 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-5 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-5 .content:nth-of-type(3) {
+  color: #ffd601;
+}
+.story-5 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-5 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-5 .content.yellow {
+  color: #ffd601;
+}
+
+.story-5::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg6.png");
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.45);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 6
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-6 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-6 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-6 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-6 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-6 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-6 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-6 .content span {
+  padding: 1px;
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035 -0.5em 0 0 #A10035;
+}
+.story-6 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-6 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-6 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-6 .content:nth-of-type(3) {
+  color: #ffd601;
+}
+.story-6 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-6 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-6 .content.yellow {
+  color: #ffd601;
+}
+.story-6 .icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 40px;
+  animation: 1s ease slidefadein;
+}
+.story-6 .icons .icon {
+  height: 100px;
+}
+
+.story-6::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg7.png");
+  background-position-y: 60%;
+  background-position-x: 15%;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 7
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-7 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-7 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  font-size: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-7 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-7 .header p {
+  color: #ffd601;
+  font-weight: 600;
+}
+.story-7 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+  gap: 25px;
+}
+.story-7 .content span {
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035, -0.5em 0 0 #A10035;
+}
+.story-7 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-7 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-7 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-7 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 8
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-8 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-8 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-8 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-8 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-8 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-8 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-8 .content span {
+  padding: 1px;
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035 -0.5em 0 0 #A10035;
+}
+.story-8 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-8 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-8 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-8 .content:nth-of-type(3) {
+  color: #ffd601;
+}
+.story-8 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-8 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-8 .content.yellow {
+  color: #ffd601;
+}
+.story-8 .icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 40px;
+  animation: 1s ease slidefadein;
+}
+.story-8 .icons .icon {
+  height: 200px;
+}
+
+.story-8::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg9.png");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+.story-7::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(35deg, #2A0944, #26313c);
+  background-position: center;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 8
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-8 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-8 .header {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  position: relative;
+  animation: 1s ease slidefadein;
+}
+.story-8 .header .x {
+  color: #ffffff;
+  vertical-align: middle;
+  font-size: 15px;
+}
+.story-8 .header .logo {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  height: 25px;
+}
+.story-8 .header p {
+  color: #ffd601;
+  font-weight: 600;
+  font-size: 25px;
+}
+.story-8 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-8 .content span {
+  padding: 1px;
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035 -0.5em 0 0 #A10035;
+}
+.story-8 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-8 .content.anim-right {
+  animation: 1s ease slidefadeinright;
+}
+.story-8 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-8 .content:nth-of-type(3) {
+  color: #ffd601;
+}
+.story-8 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-8 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-8 .content.yellow {
+  color: #ffd601;
+}
+.story-8 .icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 40px;
+  animation: 1s ease slidefadein;
+}
+.story-8 .icons .icon {
+  height: 200px;
+}
+
+.story-8::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg9.png");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 9
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-9 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-9 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-9 .content span {
+  padding: 1px;
+  background-color: #A10035;
+  box-shadow: 0.5em 0 0 #A10035 -0.5em 0 0 #A10035;
+  color: #ffffff;
+}
+.story-9 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-9 .content.anim-right {
+  animation: 1s ease 2s slidefadeinright;
+}
+.story-9 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-9 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-9 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-9 .content.yellow {
+  color: #ffd601;
+}
+.story-9 .icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 40px;
+}
+.story-9 .icons i {
+  font-size: 1.5em;
+  width: 20%;
+  text-align: center;
+  opacity: 0;
+  animation: 6s ease-in infinite pulse;
+}
+.story-9 .icons i:nth-child(1n) {
+  animation-delay: 0.4s;
+}
+.story-9 .icons i:nth-child(2n) {
+  animation-delay: 0.8s;
+}
+.story-9 .icons i:nth-child(3n) {
+  animation-delay: 1.2s;
+}
+.story-9 .icons i:nth-child(4n) {
+  animation-delay: 1.6s;
+}
+.story-9 .icons i:nth-child(5n) {
+  animation-delay: 2s;
+}
+.story-9 .icons i:nth-child(6n) {
+  animation-delay: 2.4s;
+}
+.story-9 .icons i:nth-child(7n) {
+  animation-delay: 2.8s;
+}
+.story-9 .icons i:nth-child(8n) {
+  animation-delay: 3.2s;
+}
+.story-9 .icons i:nth-child(9n) {
+  animation-delay: 3.6s;
+}
+
+.story-9::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg10.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(42, 9, 68, 0.7);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 10
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-10 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-10 .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 5;
+  font-size: 0.7em;
+  text-align: center;
+  position: relative;
+}
+.story-10 .content span {
+  padding: 1px;
+  background-color: #ffd601;
+  box-shadow: 0.5em 0 0 #ffd601 -0.5em 0 0 #ffd601;
+  color: #2E2E2E;
+}
+.story-10 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-10 .content.anim-right {
+  animation: 1s ease 2s slidefadeinright;
+}
+.story-10 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-10 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-10 .content.content-ico {
+  position: absolute;
+  bottom: 15%;
+  vertical-align: top;
+  left: -10%;
+  font-size: 2em;
+  transform: rotate(15deg);
+  animation: 2s ease infinite bounce;
+}
+.story-10 .content.yellow {
+  color: #ffd601;
+}
+.story-10 .icons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  position: relative;
+  gap: 40px;
+  animation: 1s ease slidefadeinright;
+}
+.story-10 .icons i {
+  font-size: 4em;
+  text-align: center;
+}
+
+.story-10::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg11.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba(38, 49, 60, 0.7);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 11
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+.story-11 {
+  position: relative;
+  overflow: hidden;
+  display: fl;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+.story-11 .content {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7em;
+  position: relative;
+}
+.story-11 .content span {
+  padding: 1px;
+  background-color: #ffd601;
+  box-shadow: 0.5em 0 0 #ffd601 -0.5em 0 0 #ffd601;
+  color: #2E2E2E;
+}
+.story-11 .content.header {
+  width: 70%;
+  flex: 2;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+}
+.story-11 .content.anim-left {
+  animation: 1s ease slidefadein;
+}
+.story-11 .content.anim-right {
+  animation: 1s ease 2s slidefadeinright;
+}
+.story-11 .content.anim-pulse {
+  animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+}
+.story-11 .content .fa-solid {
+  color: #ffffff;
+  font-size: 8em;
+}
+.story-11 .content.yellow {
+  color: #ffd601;
+}
+.story-11 .icons {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: 1s ease slidefadeinright;
+}
+.story-11 .icons .socials {
+  margin: 0 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.story-11 .icons .socials p {
+  margin-top: 8px;
+  font-size: 0.3em;
+  text-align: center;
+}
+.story-11 .icons i {
+  font-size: 2em;
+}
+.story-11 .icons a {
+  color: #ffffff;
+}
+.story-11 .icons a:hover {
+  color: #aaa;
+}
+
+.story-11::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg12.jpg");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(46, 46, 46, 0.7);
 }
 
 @media only screen and (min-width: 600px) {

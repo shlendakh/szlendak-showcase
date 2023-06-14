@@ -6,7 +6,7 @@ import ProgressBar from './components//ProgressBar/ProgressBar';
 
 function App() {
   const [activeStory, setActiveStory] = useState(0);
-  const totalStories = 10;
+  const totalStories = 12;
 
   const nextStory = () => {
     if (activeStory < totalStories - 1) {

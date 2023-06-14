@@ -5,7 +5,7 @@ function ProgressBar({ activeStory }, { totalStories }) {
   return (
     <div className="progress-bar">
       {console.log(activeStory + " " + totalStories)}
-      {Array(10)
+      {Array(12)
       .fill()
       .map((_, i) => (
         <div key={i} className={`progress-bar-item ${i <= activeStory ? 'active' : ''}`}></div>

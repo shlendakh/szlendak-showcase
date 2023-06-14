@@ -1,3 +1,25 @@
-// Kolory
+/* *** *** ***
+*
+* Colors
+*
+*** *** *** */
 
-$graphite: #2E2E2E;
+$graphite: #2E2E2E; //app background
+$text-color-1: #ffffff;
+$text-color-2: #ffd601;
+
+$bg-col-1: #2A0944;
+$bg-col-2: #26313c;
+
+$gradient-bg-1: linear-gradient(35deg, $bg-col-1, $bg-col-2);
+
+$accent-color-1: #A10035;
+$text-gray-1: #aaa;
+
+/* *** *** ***
+*
+* Fonts
+*
+*** *** *** */
+
+$font: 'Rubik', sans-serif;

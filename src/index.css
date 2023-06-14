@@ -1,3 +1,9 @@
+/* *** *** ***
+*
+* Reset
+*
+*** *** *** */
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -22,6 +28,106 @@ img {
   height: auto;
 }
 
+/* *** *** ***
+*
+* Imports
+*
+*** *** *** */
+/* *** *** ***
+*
+* Colors
+*
+*** *** *** */
+/* *** *** ***
+*
+* Fonts
+*
+*** *** *** */
+/* *** *** ***
+*
+* Animations
+*
+*** *** *** */
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slidefadein {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes slidefadeinright {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: rotate(15deg) scale(1);
+  }
+  50% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  0% {
+    transform: rotate(15deg) scale(1);
+  }
+}
+/* *** *** ***
+*
+* Colors
+*
+*** *** *** */
+/* *** *** ***
+*
+* Fonts
+*
+*** *** *** */
+/* *** *** ***
+*
+* Imports
+*
+*** *** *** */
+/* *** *** ***
+*
+* Colors
+*
+*** *** *** */
+/* *** *** ***
+*
+* Fonts
+*
+*** *** *** */
+/* *** *** ***
+*
+* Base HTML
+*
+*** *** *** */
 body {
   background-color: #2E2E2E;
   color: white;

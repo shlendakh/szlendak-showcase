@@ -1,21 +1,34 @@
-@use "sass:math";
-@import '../../sass/reset';
-@import '../../sass/layout';
-@import '../../sass/variables';
-@import '../../sass/base';
+/* *** *** ***
+*
+* Imports
+*
+*** *** *** */
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@use "sass:math";
+@import '../../sass/variables';
+
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story default
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
 .story {
     width: 100%;
     height: calc(var(--vh, 1vh) * 100);
     display: flex;
     font-size: 2em;
-    color: white;
-    font-family: 'Rubik', sans-serif;
+    color: $text-color-1;
+    font-family: $font;
+    z-index: 0;
   }  
 
-// Story 0
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 0
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
 .story-0 {
   position: relative;
@@ -23,10 +36,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color:#c8bd1d;
+  color: $text-color-2;
 
-  & h1 {
-    flex: 2;
+  .header {
+    margin-bottom: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .x {
+    color: $text-color-1;
+    font-size: 0.6em;
+
+    i {
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  h1 {
+
     width: 100%;
     font-size: 1.2em;
     display: flex;
@@ -35,29 +67,30 @@
     text-align: center;
   }
 
-  & h2 {
-    flex: 2;
+  h2 {
+    flex: 3;
     width: 100%;
     font-size: 0.8em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     text-align: center;
-    color: white;
+    color: $text-color-1;
   }
 
-  & h3 {
+  h3 {
     flex: 1;
     width: 100%;
     font-size: 0.7em;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
     text-align: center;
-    color: white;
+    color: $text-color-1;
   }
 
-  & p {
+  p {
     flex: 1;
     width: 100%;
     font-size: 0.3em;
@@ -66,11 +99,11 @@
     justify-content: flex-start;
     text-align: center;
     justify-content: center;
-    color: #AAA;
+    color: $text-gray-1;
   }
 
-  & .content {
-    flex: 2;
+  .content {
+    flex: 3;
     height: 100%;
     width: 100%;
     display: flex;
@@ -78,36 +111,16 @@
     justify-content: flex-start;
   }
 
-  & .fa-solid {
-    color: #FFF;
+  .fa-solid {
+    color: $text-color-1;
     margin-left: 5px;
+    
+  }
+
+  .fa-arrow-right {
     animation: 3s ease-in infinite pulse;
   }
 
-  @keyframes pulse {
-    0% {
-      // color: rgba(255,255,255,1.0)
-      opacity: 1;
-    }
-
-    25% {
-      // color: rgba(255,255,255,.5)
-    }
-
-    50% {
-      // color: rgba(255,255,255,0)
-      opacity: 0;
-    }
-
-    75% {
-      // color: rgba(255,255,255,.5)
-    }
-    
-    100% {
-      // color: rgba(255,255,255,1.0)
-      opacity: 1;
-    }
-  }
 }
 
 .story-0::before {
@@ -124,10 +137,14 @@
   background-size: 80% auto;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  box-shadow: inset 0 0 0 1000px #080830AA;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-1, $alpha: .6);
 }
 
-// Story 1
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 1
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
 
 .story-1 {
   position: relative;
@@ -135,84 +152,1212 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color:#c8bd1d;
 
-  & h1 {
-    flex: 2;
-    width: 100%;
-    font-size: 1.2em;
+  .text {
+    position: relative;
+    flex: 4;
+    width: 90%;
+    font-size: .7em;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    text-align: center;
-  }
-
-  & h2 {
-    flex: 2;
-    width: 100%;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    color: white;
-  }
-
-  & h3 {
-    flex: 1;
-    width: 100%;
-    font-size: 0.7em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: center;
-    color: white;
-  }
-
-  & p {
-    flex: 1;
-    width: 100%;
-    font-size: 0.3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: center;
+    align-items: center;
     justify-content: center;
-    color: #AAA;
   }
 
-  & .content {
-    flex: 2;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  .text-top {
     justify-content: flex-start;
+    animation: 1s ease slidefadein;
   }
 
-  & .fa-solid {
-    color: #FFF;
-    margin-left: 5px;
+  .text-bottom {
+    flex: 3;
+    justify-content: flex-end;
+    animation: 1s ease slidefadein;
+  }
 
-  
+  .text-center {
+    justify-content: center;
+    animation: 1.2s ease slidefadeinright;
+  }
+
+  .yellow {
+    color: $text-color-2;
+  }
+
+  .text-bg {
+    width: 80%;
+    span {
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1,-0.5em 0 0 $accent-color-1;
+    }
   }
 }
 
 .story-1::before {
   content: '';
   position: absolute;
-  width: 200%;
-  height: 200%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  background-image: url("../../../public/assets/img/bg1.jpg");
+  background: $gradient-bg-1;
   background-position: center;
-  background-position-x: 20%;
-  background-position-y: 55%;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 2
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-2 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+  }
+}
+
+.story-2::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg3.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 80% auto;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  box-shadow: inset 0 0 0 1000px #080830AA;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-2, $alpha: .8);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 3
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-3 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1,-0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+  }
+}
+
+.story-3::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg4.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-2, $alpha: .8);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 4
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-4 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $bg-col-1;
+      box-shadow: 0.5em 0 0 $bg-col-1 -0.5em 0 0 $bg-col-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    &:nth-of-type(3){
+      color: $text-color-2;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+  }
+}
+
+.story-4::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg5.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-2, $alpha: .6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 5
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-5 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+    gap: 10px;
+
+    span {
+      padding: 1px;
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    &:nth-of-type(3){
+      color: $text-color-2;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+}
+
+.story-5::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg6.png");
+  background-position-y: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: #000, $alpha: .45);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 6
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-6 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    &:nth-of-type(3){
+      color: $text-color-2;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    gap: 40px;
+    animation: 1s ease slidefadein;
+
+    .icon {
+      height: 100px;
+    }
+  }
+}
+
+.story-6::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg7.png");
+  background-position-y: 60%;
+  background-position-x: 15%;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: #000, $alpha: .6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 7
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-7 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: 25px;
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+    gap: 25px;
+
+    span {
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1,-0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+  }
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 8
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-8 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    &:nth-of-type(3){
+      color: $text-color-2;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    gap: 40px;
+    animation: 1s ease slidefadein;
+
+    .icon {
+      height: 200px;
+    }
+  }
+}
+
+.story-8::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg9.png");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: #000, $alpha: .6);
+}
+
+
+.story-7::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: $gradient-bg-1;
+  background-position: center;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 8
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-8 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .header {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    position: relative;
+    animation: 1s ease slidefadein;
+
+    .x {
+      color: $text-color-1;
+      vertical-align: middle;
+      font-size: 15px;
+    }
+
+    .logo {
+      background-color: $text-color-1;
+      padding: 5px;
+      border-radius: 5px;
+      height: 25px;
+    }
+
+    p {
+      color: $text-color-2;
+      font-weight: 600;
+      font-size: 25px;
+    }
+  }
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    &:nth-of-type(3){
+      color: $text-color-2;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    gap: 40px;
+    animation: 1s ease slidefadein;
+
+    .icon {
+      height: 200px;
+    }
+  }
+}
+
+.story-8::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg9.png");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: #000, $alpha: .6);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 9
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-9 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $accent-color-1;
+      box-shadow: 0.5em 0 0 $accent-color-1 -0.5em 0 0 $accent-color-1;
+      color: $text-color-1;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease 2s slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    gap: 40px;
+
+    i {
+      font-size: 1.5em;
+      width: 20%;
+      text-align: center;
+      opacity: 0;
+      animation: 6s ease-in infinite pulse;
+    }
+
+    @for $i from 1 through 9 {
+      i:nth-child(#{$i}n){
+        animation-delay: #{$i * .4}s;
+      }
+    }
+  }
+}
+
+.story-9::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg10.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-1, $alpha: .7);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 10
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-10 {
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 5;
+    font-size: 0.7em;
+    text-align: center;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $text-color-2;
+      box-shadow: 0.5em 0 0 $text-color-2 -0.5em 0 0 $text-color-2;
+      color: $graphite;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease 2s slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.content-ico {
+      position: absolute;
+      bottom: 15%;
+      vertical-align: top;
+      left: -10%;
+      font-size: 2em;
+      transform: rotate(15deg);
+      animation: 2s ease infinite bounce;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    gap: 40px;
+    animation: 1s ease slidefadeinright;
+
+    i {
+      font-size: 4em;
+      text-align: center;
+    }
+  }
+}
+
+.story-10::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg11.jpg");
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  box-shadow: inset 0 0 0 1000px rgba($color: $bg-col-2, $alpha: .7);
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+*
+* Story 11
+*
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+.story-11 {
+  position: relative;
+  overflow: hidden;
+  display: fl;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    position: relative;
+
+    span {
+      padding: 1px;
+      background-color: $text-color-2;
+      box-shadow: 0.5em 0 0 $text-color-2 -0.5em 0 0 $text-color-2;
+      color: $graphite;
+    }
+
+    &.header {
+      width: 70%;
+      flex: 2;
+      font-size: 1em;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    &.anim-left {
+      animation: 1s ease slidefadein;
+    }
+
+    &.anim-right {
+      animation: 1s ease 2s slidefadeinright;
+    }
+
+    &.anim-pulse {
+      animation: 1s ease slidefadein, 1s ease fadeout, 3s ease infinite pulse;
+    }
+
+    .fa-solid {
+      color: $text-color-1;
+      font-size: 8em;
+    }
+
+    &.yellow {
+      color: $text-color-2;
+    }
+  }
+
+  .icons {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: 1s ease slidefadeinright;
+
+    .socials {
+      margin: 0 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        margin-top: 8px;
+        font-size: .3em;
+        text-align: center;
+      }
+    }
+
+    i {
+      font-size: 2em;
+    }
+
+    a {
+      color: $text-color-1;
+    }
+
+    a:hover {
+      color: $text-gray-1;
+    }
+  }
+}
+
+.story-11::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../../../public/assets/img/bg12.jpg");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: auto 125%;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba($color: $graphite, $alpha: .7);
 }
 
 @media only screen and (min-width: 600px) {
